@@ -77,3 +77,9 @@ namespace :pages do
     puts "complete"
   end
 end
+
+namespace :static_docs
+  task :import do
+    Rake::Task["pages:import"].invoke
+  end
+end
